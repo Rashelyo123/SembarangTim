@@ -26,8 +26,17 @@ public class PlayerShooting : MonoBehaviour
     {
         while (IsShooting)
         {
-            Instantiate(bulletPrefab, transform.position + Vector3.forward, Quaternion.identity);
+            GameObject bullet = Instantiate(bulletPrefab, transform.position + transform.forward, Quaternion.identity);
+            Rigidbody rb = bullet.GetComponent<Rigidbody>();
+
+            if (rb != null)
+            {
+                rb.velocity = transform.forward * 10f;
+            }
+            Destroy(bullet, 2f);
+
             yield return new WaitForSeconds(fireRate);
         }
     }
+
 }

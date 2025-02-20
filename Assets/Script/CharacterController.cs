@@ -87,8 +87,8 @@ public class PlayerController : MonoBehaviour
         else
         {
             y -= JumpPower * 2 * Time.deltaTime;
-            if (m_char.velocity.y < 0.1f)
-                Debug.Log("Fall");
+            if (m_char.velocity.y < 0.1f) ;
+
         }
 
 

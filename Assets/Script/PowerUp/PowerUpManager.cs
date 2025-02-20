@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class PowerUpManager : MonoBehaviour
 {
-    private void OggerEnter(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            PowerUpBase powerUp = other.GetComponent<PowerUpBase>();
+            PowerUpBase powerUp = GetComponent<PowerUpBase>();
             if (powerUp != null)
             {
                 powerUp.Activate(other.gameObject);
                 Destroy(gameObject); // Destroy
             }
         }
+
+
     }
+
 }
