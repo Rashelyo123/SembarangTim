@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 4097262353174117837}
   - component: {fileID: 7631010715270204939}
   - component: {fileID: 5428496881848467925}
+  - component: {fileID: 2809642493999268136}
+  - component: {fileID: -9015868571455556587}
+  - component: {fileID: 830359609287781146}
   m_Layer: 0
   m_Name: Meja_Kursi
   m_TagString: Untagged
@@ -84,3 +87,55 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2809642493999268136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3239691800089128449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3499482344136f74b8b8d8a31a24b4e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackHole: {fileID: 556624744758838412, guid: 3376444a6ba7d1a4ba430339c99f6c1f, type: 3}
+  maxSpeed: 10
+  acceleration: 5
+  spiralStrength: 2
+  destroyDistance: 0.2
+  activationRadius: 10
+--- !u!114 &-9015868571455556587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3239691800089128449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6dc94e00987046489130dafc2c972e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemData: {fileID: 11400000, guid: 992face52c614e64fb7c9da94b7e55d0, type: 2}
+--- !u!65 &830359609287781146
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3239691800089128449}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.5852427, y: 1.4638298, z: 1.0887423}
+  m_Center: {x: -0.65783966, y: -1.2520621, z: 0.23103836}

@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 8340038254927153369}
   - component: {fileID: 907697663843362169}
   - component: {fileID: 5607371784918918990}
+  - component: {fileID: 3084184662902124176}
+  - component: {fileID: -3508931494266244257}
+  - component: {fileID: 4674088804233858034}
   m_Layer: 0
   m_Name: lukisan
   m_TagString: Untagged
@@ -88,3 +91,55 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &3084184662902124176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665396728249855970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6dc94e00987046489130dafc2c972e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemData: {fileID: 11400000, guid: e3b86854fb3503a4b861d8bf13447a7d, type: 2}
+--- !u!114 &-3508931494266244257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665396728249855970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3499482344136f74b8b8d8a31a24b4e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackHole: {fileID: 556624744758838412, guid: 3376444a6ba7d1a4ba430339c99f6c1f, type: 3}
+  maxSpeed: 10
+  acceleration: 5
+  spiralStrength: 2
+  destroyDistance: 0.2
+  activationRadius: 10
+--- !u!65 &4674088804233858034
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665396728249855970}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.09270716, y: 0.85878074, z: 0.88268507}
+  m_Center: {x: 4.4239874, y: 0.59900564, z: 1.7400365}

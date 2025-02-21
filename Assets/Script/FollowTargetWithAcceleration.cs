@@ -2,11 +2,12 @@ using UnityEngine;
 
 public class SuckedIntoBlackHole : MonoBehaviour
 {
-    public Transform blackHole;   // Referensi ke black hole
-    public float maxSpeed = 10f;  // Kecepatan maksimum
-    public float acceleration = 5f; // Seberapa cepat objek tertarik
-    public float spiralStrength = 2f; // Kekuatan spiral sebelum masuk
-    public float destroyDistance = 0.2f; // Jarak untuk dihancurkan
+    public Transform blackHole;
+    public float maxSpeed = 10f;
+    public float acceleration = 5f;
+    public float spiralStrength = 2f;
+    public float destroyDistance = 0.2f;
+    public float activationRadius = 10f; // Radius Black Hole
 
     private float currentSpeed = 0f;
 
@@ -14,26 +15,46 @@ public class SuckedIntoBlackHole : MonoBehaviour
     {
         if (blackHole == null) return;
 
-        // Hitung arah ke black hole
-        Vector3 direction = (blackHole.position - transform.position).normalized;
+        float distance = Vector3.Distance(transform.position, blackHole.position);
 
-        // Tambahkan efek spiral dengan gaya cross product
+        if (distance > activationRadius)
+        {
+            return;
+        }
+
+        if (distance <= destroyDistance)
+        {
+            // Cek apakah Item ada di objek ini
+            Item item = GetComponent<Item>();
+            if (item != null && GameManager.instance != null)
+            {
+                Debug.Log($"Menambahkan efisiensi: {item.itemData.efficiencyValue}");
+                GameManager.instance.AddEfficiency(item.itemData.efficiencyValue);
+            }
+            else
+            {
+                Debug.LogWarning("Item atau GameManager.instance tidak ditemukan!");
+            }
+
+            Destroy(gameObject);
+            return;
+        }
+
+        // Pergerakan ke black hole
+        Vector3 direction = (blackHole.position - transform.position).normalized;
         Vector3 spiralEffect = Vector3.Cross(direction, Vector3.up) * spiralStrength;
 
-        // Percepat objek semakin dekat ke black hole
         currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, acceleration * Time.deltaTime);
-
-        // Gerakkan objek menuju black hole dengan sedikit efek spiral
         transform.position += (direction + spiralEffect) * currentSpeed * Time.deltaTime;
-
-        // Putar objek untuk efek tersedot
         transform.Rotate(Vector3.forward, currentSpeed * 50f * Time.deltaTime);
+    }
 
-        // Hancurkan objek jika sudah terlalu dekat
-        if (Vector3.Distance(transform.position, blackHole.position) <= destroyDistance)
+    void OnDrawGizmos()
+    {
+        if (blackHole != null)
         {
-            Destroy(gameObject);
-
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(blackHole.position, activationRadius);
         }
     }
 }
