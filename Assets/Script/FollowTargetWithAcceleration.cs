@@ -28,7 +28,7 @@ public class SuckedIntoBlackHole : MonoBehaviour
             Item item = GetComponent<Item>();
             if (item != null && GameManager.instance != null)
             {
-                Debug.Log($"Menambahkan efisiensi: {item.itemData.efficiencyValue}");
+
                 GameManager.instance.AddEfficiency(item.itemData.efficiencyValue);
             }
             else

@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using DG.Tweening;
+using System.Globalization;
 
 public class UIEfficiencyDisplay : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class UIEfficiencyDisplay : MonoBehaviour
         DOTween.To(() => currentEfficiency, x =>
         {
             currentEfficiency = x;
-            efficiencyText.text = "Rp." + currentEfficiency.ToString();
+            efficiencyText.text = "Rp." + currentEfficiency.ToString("N0", new CultureInfo("id-ID"));
         }, newEfficiency, 0.5f).SetEase(Ease.OutQuad);
 
         efficiencyText.transform.DOScale(1.3f, 0.2f).SetEase(Ease.OutBack)
