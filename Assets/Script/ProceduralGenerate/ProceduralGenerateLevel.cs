@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ProceduralGenerateLevel : MonoBehaviour
 {
+    //public static ProceduralGenerateLevel instance;
     public List<GameObject> easyTracks;
     public List<GameObject> mediumTracks;
     public List<GameObject> hardTracks;
