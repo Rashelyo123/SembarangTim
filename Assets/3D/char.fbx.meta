@@ -3,7 +3,22 @@ guid: dd5ea4e2d4128184690fbb834d8fead2
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: baju
+    second: {fileID: 2100000, guid: 6b90911847534a347ba42fe4fb0113f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: celana
+    second: {fileID: 2100000, guid: 50be5a935c6c53f4dbe95ea9f6af4934, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: kulit
+    second: {fileID: 2100000, guid: 2b75656eba943d04c9f292b14b95f1ba, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
