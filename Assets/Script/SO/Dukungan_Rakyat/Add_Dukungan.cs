@@ -14,6 +14,7 @@ public class Add_Dukungan : MonoBehaviour
             {
                 GameManager.instance.AddDukunganRakyat(dukunganData.dukunganValue);
                 Destroy(gameObject);
+                AudioEventSystem.PlayAudio("Coin");
             }
             else
             {
