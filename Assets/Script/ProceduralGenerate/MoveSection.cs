@@ -6,8 +6,22 @@ public class MoveSection : MonoBehaviour
 {
 
     public float Speed = -7;
+    bool IsMove = true;
     void Update()
     {
-        transform.position += new Vector3(0, 0, Speed) * Time.deltaTime;
+        if (IsMove)
+        {
+            transform.position += new Vector3(0, 0, Speed) * Time.deltaTime;
+
+        }
+    }
+
+    public void NotMove()
+    {
+        IsMove = false;
+    }
+    public void Move()
+    {
+        IsMove = true;
     }
 }

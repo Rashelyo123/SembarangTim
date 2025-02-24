@@ -21,6 +21,13 @@ public class AnimationPlayer : MonoBehaviour
         kamera.DOLocalMove(EndPos, 0.5f);
 
     }
+    public void SetDie()
+    {
+        Vector3 EndPos = startPos;
+        EndPos.z = -5;
+        kamera.DOLocalMove(EndPos, 1.5f);
+
+    }
     public void SetUnSlide()
     {
         kamera.DOLocalMove(startPos, 0.2f);

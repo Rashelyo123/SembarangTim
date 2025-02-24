@@ -14,6 +14,7 @@ public class PlayerShooting : MonoBehaviour
         fireRate = rate;
         IsShooting = true;
         StartCoroutine(Shoot());
+        AudioEventSystem.PlayAudio("Shoot");
 
 
     }

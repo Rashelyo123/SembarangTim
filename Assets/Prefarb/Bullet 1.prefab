@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5995796355013770592}
   - component: {fileID: -8033856205667856776}
   - component: {fileID: 1191449143165142956}
+  - component: {fileID: 948074796267867279}
   m_Layer: 0
   m_Name: Bullet 1
   m_TagString: Untagged
@@ -31,8 +32,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.56593376, y: 0.5736237, z: -0.41589803, w: 0.42154917}
   m_LocalPosition: {x: -0.17373784, y: 1.9969956, z: -6.9324937}
-  m_LocalScale: {x: 0.03, y: 0.06, z: 0.03}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.17, y: 0.34, z: 0.17}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 175660909362055236}
   m_Father: {fileID: 0}
@@ -102,7 +103,7 @@ CapsuleCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -233,6 +234,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &948074796267867279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652675379007633733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da191629498c46647bdc74c5775e48f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5983029939446555547
 GameObject:
   m_ObjectHideFlags: 0

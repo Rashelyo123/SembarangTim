@@ -8,9 +8,24 @@ public class PowerUpSpawner : MonoBehaviour
     public float spawnIntervalMin = 3f; // Waktu minimum antar spawn
     public float spawnIntervalMax = 6f; // Waktu maksimum antar spawn
 
+    bool isSpawn = true;
+
     void Start()
     {
-        StartCoroutine(SpawnPowerUps());
+        if (isSpawn)
+        {
+
+            // StartCoroutine(SpawnPowerUps());
+        }
+    }
+
+    public void noSpawn()
+    {
+        isSpawn = false;
+    }
+    public void Spawn()
+    {
+        isSpawn = true;
     }
 
     IEnumerator SpawnPowerUps()

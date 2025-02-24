@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2683953879138154094}
   - component: {fileID: 8500885065535516830}
   - component: {fileID: 2210964681606881741}
+  - component: {fileID: -9010284056531326333}
   m_Layer: 0
   m_Name: Suara Rakyat
   m_TagString: Untagged
@@ -125,3 +126,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dukunganData: {fileID: 11400000, guid: 5a962c661cbd08346ad23e5156032475, type: 2}
+--- !u!114 &-9010284056531326333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2605662744914183160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a643fe98294b98a46a51fd823949ff10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: -18
