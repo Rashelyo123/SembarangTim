@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   duration: 5
-  bulletprefab: {fileID: 3734589048510588717, guid: bfc0de08dd5aa454092b9bd7fee48fcb, type: 3}
+  bulletprefab: {fileID: 1652675379007633733, guid: b4c604ff5e36b734fbc36bbb5b7504f1, type: 3}
   fireRate: 0.5
 --- !u!136 &3915071787877071706
 CapsuleCollider:

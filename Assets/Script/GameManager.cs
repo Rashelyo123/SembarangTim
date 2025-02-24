@@ -106,17 +106,17 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         isGameRunning = true;
-        StartCoroutine(DukunganRakyatPerSecond());
+        //StartCoroutine(DukunganRakyatPerSecond());
     }
 
-    private IEnumerator DukunganRakyatPerSecond()
-    {
-        while (isGameRunning)
-        {
-            AddDukunganRakyat(dukunganRakyatPerSecond);
-            yield return new WaitForSeconds(0.3f);
-        }
-    }
+    // private IEnumerator DukunganRakyatPerSecond()
+    // {
+    //     while (isGameRunning)
+    //     {
+    //          //AddDukunganRakyat(dukunganRakyatPerSecond);
+    //         yield return new WaitForSeconds(0.3f);
+    //     }
+    // }
     public void StopGame()
     {
         isGameRunning = false;
@@ -151,7 +151,7 @@ public class GameManager : MonoBehaviour
         }
 
 
-        StopCoroutine(DukunganRakyatPerSecond());
+        // StopCoroutine(DukunganRakyatPerSecond());
     }
 
 
@@ -161,7 +161,7 @@ public class GameManager : MonoBehaviour
         if (CurrencyManager.instance.UseDukunganRakyat(cost))
         {
             isGameRunning = true;
-            StartCoroutine(DukunganRakyatPerSecond());
+            // StartCoroutine(DukunganRakyatPerSecond());
             Debug.Log("Game Dilanjutkan!");
         }
         else

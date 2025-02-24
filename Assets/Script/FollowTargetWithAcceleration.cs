@@ -5,11 +5,26 @@ public class SuckedIntoBlackHole : MonoBehaviour
     public Transform blackHole;
     public float maxSpeed = 10f;
     public float acceleration = 5f;
-    public float spiralStrength = 2f;
-    public float destroyDistance = 0.2f;
-    public float activationRadius = 10f; // Radius Black Hole
+    public float destroyDistance = 2.86f;
+    public float activationRadius = 43.4f; // Radius Black Hole
 
     private float currentSpeed = 0f;
+
+    void Start()
+    {
+        if (blackHole == null)
+        {
+            GameObject bh = GameObject.FindWithTag("BlackHole");
+            if (bh != null)
+            {
+                blackHole = bh.transform;
+            }
+            else
+            {
+                Debug.LogError("Black Hole tidak ditemukan! Pastikan ada objek dengan tag 'BlackHole'");
+            }
+        }
+    }
 
     void Update()
     {
@@ -26,9 +41,9 @@ public class SuckedIntoBlackHole : MonoBehaviour
         {
             // Cek apakah Item ada di objek ini
             Item item = GetComponent<Item>();
+
             if (item != null && GameManager.instance != null)
             {
-
                 GameManager.instance.AddEfficiency(item.itemData.efficiencyValue);
             }
             else
@@ -42,10 +57,9 @@ public class SuckedIntoBlackHole : MonoBehaviour
 
         // Pergerakan ke black hole
         Vector3 direction = (blackHole.position - transform.position).normalized;
-        Vector3 spiralEffect = Vector3.Cross(direction, Vector3.up) * spiralStrength;
 
         currentSpeed = Mathf.MoveTowards(currentSpeed, maxSpeed, acceleration * Time.deltaTime);
-        transform.position += (direction + spiralEffect) * currentSpeed * Time.deltaTime;
+        transform.position += direction * currentSpeed * Time.deltaTime;
         transform.Rotate(Vector3.forward, currentSpeed * 50f * Time.deltaTime);
     }
 
@@ -55,6 +69,8 @@ public class SuckedIntoBlackHole : MonoBehaviour
         {
             Gizmos.color = Color.red;
             Gizmos.DrawWireSphere(blackHole.position, activationRadius);
+            Gizmos.color = Color.black;
+            Gizmos.DrawWireSphere(blackHole.position, destroyDistance);
         }
     }
 }

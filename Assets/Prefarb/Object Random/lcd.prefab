@@ -105,9 +105,8 @@ MonoBehaviour:
   blackHole: {fileID: 556624744758838412, guid: 3376444a6ba7d1a4ba430339c99f6c1f, type: 3}
   maxSpeed: 10
   acceleration: 5
-  spiralStrength: 2
-  destroyDistance: 0.2
-  activationRadius: 10
+  destroyDistance: 2.73
+  activationRadius: 43.4
 --- !u!114 &-2805902014519360110
 MonoBehaviour:
   m_ObjectHideFlags: 0
