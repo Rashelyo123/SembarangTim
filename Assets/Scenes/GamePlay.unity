@@ -208,6 +208,7 @@ GameObject:
   - component: {fileID: 324998110}
   - component: {fileID: 324998112}
   - component: {fileID: 324998111}
+  - component: {fileID: 324998113}
   m_Layer: 5
   m_Name: bg_LanjutGame
   m_TagString: Untagged
@@ -225,7 +226,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1667501148}
   - {fileID: 1265797117}
@@ -275,6 +276,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 324998109}
   m_CullTransparentMesh: 1
+--- !u!95 &324998113
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 324998109}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 6dcf75db4d2c17641bd417d594a76ac7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &339158264 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8983654597173980239, guid: 2ae2b99991454af4e8d643ecb1427418, type: 3}
@@ -1410,6 +1432,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrencyPurcase: {fileID: 324998109}
   GameOverPanel: {fileID: 1142806201}
+  anim: {fileID: 1142806205}
+  anim2: {fileID: 324998113}
 --- !u!1 &953151590
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,6 +1974,7 @@ MonoBehaviour:
   lastScoreText: {fileID: 1060905876}
   PlayerController: {fileID: 972251472}
   moveSection: {fileID: 339158264}
+  ui_Manager: {fileID: 951643787}
   UI_HasilAkhir: {fileID: 1142806201}
   UI_ContinueGame: {fileID: 324998109}
   dukunganRakyatPerSecond: 10
@@ -2342,6 +2367,7 @@ GameObject:
   - component: {fileID: 1142806202}
   - component: {fileID: 1142806204}
   - component: {fileID: 1142806203}
+  - component: {fileID: 1142806205}
   m_Layer: 5
   m_Name: bg_Over
   m_TagString: Untagged
@@ -2359,7 +2385,7 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1375907585}
   - {fileID: 1718120153}
@@ -2416,6 +2442,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142806201}
   m_CullTransparentMesh: 1
+--- !u!95 &1142806205
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1142806201}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5973eb6b25af82548a6c0cfab104d15c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1181041575
 GameObject:
   m_ObjectHideFlags: 0
@@ -3216,8 +3263,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294949632
-  m_fontColor: {r: 0, g: 0.7338085, b: 1, a: 1}
+    rgba: 4288181003
+  m_fontColor: {r: 0.043214217, g: 0.4496789, b: 0.59748423, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -3884,7 +3931,7 @@ MonoBehaviour:
   m_fontColor32:
     serializedVersion: 2
     rgba: 4294946816
-  m_fontColor: {r: 0, g: 0.68964005, b: 1, a: 1}
+  m_fontColor: {r: 0.06330834, g: 0.44067612, b: 0.61006284, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

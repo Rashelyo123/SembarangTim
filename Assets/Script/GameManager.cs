@@ -17,11 +17,13 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     public PlayerController PlayerController;
     public MoveSection moveSection;
+    public UI_Manager ui_Manager;
 
     [Header("UI Display")]
     [SerializeField] private GameObject UI_HasilAkhir;
 
     [SerializeField] private GameObject UI_ContinueGame;
+   
 
     private int totalEfficiency = 0;
     private int totalDukunganRakyat = 0;
@@ -185,6 +187,7 @@ public class GameManager : MonoBehaviour
         int cost = 1000;
         if (CurrencyManager.instance.UseDukunganRakyat(cost))
         {
+          ui_Manager.AnimUIContinueGame();
             PlayerController.enabled = true;
             isGameRunning = true;
             UI_ContinueGame.SetActive(false);
