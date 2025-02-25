@@ -128,6 +128,7 @@ public class GameManager : MonoBehaviour
     // }
     public void StopGame()
     {
+        PlayerController.enabled = false;
         MoveSection[] movingObjects = FindObjectsOfType<MoveSection>();
 
         foreach (MoveSection obj in movingObjects)
@@ -184,6 +185,7 @@ public class GameManager : MonoBehaviour
         int cost = 1000;
         if (CurrencyManager.instance.UseDukunganRakyat(cost))
         {
+            PlayerController.enabled = true;
             isGameRunning = true;
             UI_ContinueGame.SetActive(false);
             PlayerController.Life();

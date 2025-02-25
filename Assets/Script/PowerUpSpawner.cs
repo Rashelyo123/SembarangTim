@@ -15,7 +15,7 @@ public class PowerUpSpawner : MonoBehaviour
         if (isSpawn)
         {
 
-            // StartCoroutine(SpawnPowerUps());
+            StartCoroutine(SpawnPowerUps());
         }
     }
 
