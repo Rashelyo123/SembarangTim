@@ -4,7 +4,10 @@ using Unity.VisualScripting;
 using UnityEngine;
 
 
-public enum SIDE { Left, Mid, Right }
+public enum SIDE { Left = -2, Mid = 0, Right = 2 }
+public enum HitX { Left, Mid, Right, None }
+public enum HitY { Up, Mid, Down, None }
+public enum HitZ { Forward, Mid, Backward, None }
 
 public class PlayerController : MonoBehaviour
 {
@@ -23,6 +26,10 @@ public class PlayerController : MonoBehaviour
     public bool InSlide;
     private float ColHeight;
     private float ColCenterY;
+    public float FwdSpeed = 7f;
+    public HitX hitX = HitX.None;
+    public HitY hitY = HitY.None;
+    public HitZ hitZ = HitZ.None;
 
     void Start()
     {
@@ -66,7 +73,7 @@ public class PlayerController : MonoBehaviour
                 m_Side = SIDE.Mid;
             }
         }
-        Vector3 moveVector = new Vector3(x - transform.position.x, y * Time.deltaTime, 0);
+        Vector3 moveVector = new Vector3(x - transform.position.x, y * Time.deltaTime, FwdSpeed * Time.deltaTime);
         x = Mathf.Lerp(x, NewXPos, Time.deltaTime * SpeedDodge);
         m_char.Move(moveVector);
         Jump();
@@ -87,7 +94,10 @@ public class PlayerController : MonoBehaviour
         else
         {
             y -= JumpPower * 2 * Time.deltaTime;
-            if (m_char.velocity.y < 0.1f) ;
+            if (m_char.velocity.y < 0.1f)
+            {
+                // ntar
+            }
 
         }
 
@@ -117,6 +127,60 @@ public class PlayerController : MonoBehaviour
                 InSlide = false;
             }
         }
+    }
+    public void OnCharacterColliderHit(Collider col)
+    {
+        hitX = GetHitX(col);
+        hitY = GetHitY(col);
+        hitZ = GetHitZ(col);
+    }
+    public HitX GetHitX(Collider col)
+    {
+        Bounds char_bounds = m_char.bounds;
+        Bounds col_bounds = col.bounds;
+        float min_x = Mathf.Max(col_bounds.min.x, char_bounds.min.x);
+        float max_x = Mathf.Min(col_bounds.max.x, char_bounds.max.x);
+        float average = (min_x + max_x) / 2f - col_bounds.min.x;
+        HitX hit;
+        if (average > col_bounds.size.x - 0.33f)
+            hit = HitX.Right;
+        else if (average < 0.33f)
+            hit = HitX.Left;
+        else hit = HitX.Mid;
+        return hit;
+
+    }
+    public HitY GetHitY(Collider col)
+    {
+        Bounds char_bounds = m_char.bounds;
+        Bounds col_bounds = col.bounds;
+        float min_y = Mathf.Max(col_bounds.min.y, char_bounds.min.y);
+        float max_y = Mathf.Min(col_bounds.max.y, char_bounds.max.y);
+        float average = ((min_y + max_y) / 2f - char_bounds.min.y) / char_bounds.size.y;
+        HitY hit;
+        if (average < 0.33f)
+            hit = HitY.Down;
+        else if (average < 0.66f)
+            hit = HitY.Mid;
+        else hit = HitY.Up;
+        return hit;
+
+    }
+    public HitZ GetHitZ(Collider col)
+    {
+        Bounds char_bounds = m_char.bounds;
+        Bounds col_bounds = col.bounds;
+        float min_z = Mathf.Max(col_bounds.min.z, char_bounds.min.z);
+        float max_z = Mathf.Min(col_bounds.max.z, char_bounds.max.z);
+        float average = ((min_z + max_z) / 2f - char_bounds.min.y) / char_bounds.size.z;
+        HitZ hit;
+        if (average < 0.33f)
+            hit = HitZ.Backward;
+        else if (average < 0.66f)
+            hit = HitZ.Mid;
+        else hit = HitZ.Forward;
+        return hit;
+
     }
 
 

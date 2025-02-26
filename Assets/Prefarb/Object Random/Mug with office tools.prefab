@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 6338326491351558363}
   - component: {fileID: 2096647694822439725}
   - component: {fileID: 2920923498274157128}
+  - component: {fileID: -7803483258650802044}
+  - component: {fileID: -8942053277329057630}
+  - component: {fileID: 2844246535297939928}
   m_Layer: 0
   m_Name: Mug with office tools
   m_TagString: Untagged
@@ -83,3 +86,57 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-7803483258650802044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3972244562386930055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6dc94e00987046489130dafc2c972e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemData: {fileID: 11400000, guid: 90713e4f0439c1e4fa64db52cfdc5702, type: 2}
+--- !u!114 &-8942053277329057630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3972244562386930055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3499482344136f74b8b8d8a31a24b4e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blackHole: {fileID: 556624744758838412, guid: 3376444a6ba7d1a4ba430339c99f6c1f, type: 3}
+  maxSpeed: 10
+  acceleration: 5
+  spiralStrength: 2
+  destroyDistance: 0.2
+  activationRadius: 10
+--- !u!136 &2844246535297939928
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3972244562386930055}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.05286533
+  m_Height: 0.19906302
+  m_Direction: 1
+  m_Center: {x: -0.0117928125, y: 0.09953151, z: -0.002934821}
