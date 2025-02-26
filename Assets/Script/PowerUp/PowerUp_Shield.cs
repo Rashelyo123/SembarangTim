@@ -9,6 +9,7 @@ public class PowerUp_Shield : PowerUpBase
     {
         GameObject shield = Instantiate(shieldPrefab, player.transform);
         Destroy(shield, duration);
+        AudioEventSystem.PlayAudio("Shield");
 
     }
 }

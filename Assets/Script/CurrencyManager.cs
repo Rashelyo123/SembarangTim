@@ -10,7 +10,7 @@ public class CurrencyManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            //DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -32,6 +32,7 @@ public class CurrencyManager : MonoBehaviour
         dukunganRakyat += amount;
         PlayerPrefs.SetInt("SavedDukunganRakyat", dukunganRakyat);
         PlayerPrefs.Save();
+
     }
 
     public bool UseDukunganRakyat(int amount)

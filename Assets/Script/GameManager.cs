@@ -13,6 +13,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI highScoreEfficiencyText;
     [SerializeField] private TextMeshProUGUI LastdukunganRakyatText;
     [SerializeField] private TextMeshProUGUI lastScoreText;
+    [Header("Script Reference")]
+    [SerializeField]
+    public PlayerController PlayerController;
+    public MoveSection moveSection;
+    public UI_Manager ui_Manager;
+
+    [Header("UI Display")]
+    [SerializeField] private GameObject UI_HasilAkhir;
+
+    [SerializeField] private GameObject UI_ContinueGame;
+   
 
     private int totalEfficiency = 0;
     private int totalDukunganRakyat = 0;
@@ -29,7 +40,7 @@ public class GameManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);
+            // DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -106,19 +117,35 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         isGameRunning = true;
-        StartCoroutine(DukunganRakyatPerSecond());
+        //StartCoroutine(DukunganRakyatPerSecond());
     }
 
-    private IEnumerator DukunganRakyatPerSecond()
-    {
-        while (isGameRunning)
-        {
-            AddDukunganRakyat(dukunganRakyatPerSecond);
-            yield return new WaitForSeconds(0.3f);
-        }
-    }
+    // private IEnumerator DukunganRakyatPerSecond()
+    // {
+    //     while (isGameRunning)
+    //     {
+    //          //AddDukunganRakyat(dukunganRakyatPerSecond);
+    //         yield return new WaitForSeconds(0.3f);
+    //     }
+    // }
     public void StopGame()
     {
+        PlayerController.enabled = false;
+        MoveSection[] movingObjects = FindObjectsOfType<MoveSection>();
+
+        foreach (MoveSection obj in movingObjects)
+        {
+            obj.NotMove();
+        }
+        // Hentikan semua PowerUpSpawner
+        PowerUpSpawner[] spawners = FindObjectsOfType<PowerUpSpawner>();
+        foreach (PowerUpSpawner spawner in spawners)
+        {
+            spawner.noSpawn();
+        }
+        UI_HasilAkhir.SetActive(true);
+        moveSection.NotMove();
+
         isGameRunning = false;
 
         // Simpan skor terakhir sebelum animasi dimulai
@@ -151,17 +178,34 @@ public class GameManager : MonoBehaviour
         }
 
 
-        StopCoroutine(DukunganRakyatPerSecond());
+        // StopCoroutine(DukunganRakyatPerSecond());
     }
 
 
     public void ContinueGame()
     {
-        int cost = 100;
+        int cost = 1000;
         if (CurrencyManager.instance.UseDukunganRakyat(cost))
         {
+          ui_Manager.AnimUIContinueGame();
+            PlayerController.enabled = true;
             isGameRunning = true;
-            StartCoroutine(DukunganRakyatPerSecond());
+            UI_ContinueGame.SetActive(false);
+            PlayerController.Life();
+            moveSection.Move();
+            MoveSection[] movingObjects = FindObjectsOfType<MoveSection>();
+            foreach (MoveSection obj in movingObjects)
+            {
+                obj.Move();
+            }
+            // Aktifkan kembali PowerUpSpawner
+            PowerUpSpawner[] spawners = FindObjectsOfType<PowerUpSpawner>();
+            foreach (PowerUpSpawner spawner in spawners)
+            {
+                spawner.Spawn();
+            }
+
+            // StartCoroutine(DukunganRakyatPerSecond());
             Debug.Log("Game Dilanjutkan!");
         }
         else
@@ -169,11 +213,5 @@ public class GameManager : MonoBehaviour
             Debug.Log("Dukungan Rakyat tidak cukup!");
         }
     }
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StopGame();
-        }
-    }
+
 }

@@ -2,23 +2,14 @@ using UnityEngine;
 
 public class BlackHole : MonoBehaviour
 {
-    public float radius = 5f;
-    public float pullSpeed = 5f;
-
     private void OnTriggerEnter(Collider other)
     {
-        Item item = other.GetComponent<Item>();
-        if (item != null)
+        // Periksa apakah objek yang masuk memiliki skrip SuckedIntoBlackHole
+        SuckedIntoBlackHole suckedScript = other.GetComponent<SuckedIntoBlackHole>();
+
+        if (suckedScript != null)
         {
-
-            GameManager.instance.AddEfficiency(item.itemData.efficiencyValue);
-            Destroy(other.gameObject);
+            suckedScript.enabled = true; // Aktifkan skrip saat memasuki trigger
         }
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, radius);
     }
 }

@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     public HitX hitX = HitX.None;
     public HitY hitY = HitY.None;
     public HitZ hitZ = HitZ.None;
+    public Animator anim;
 
     void Start()
     {
@@ -41,10 +42,12 @@ public class PlayerController : MonoBehaviour
     }
     void Update()
     {
+
         SwipeLeft = Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow);
         SwipeRight = Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow);
         SwipeUp = Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow);
         SwipeDown = Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow);
+
         if (!InSlide)
             if (SwipeLeft && !InSlide)
             {
@@ -88,7 +91,13 @@ public class PlayerController : MonoBehaviour
             {
                 y = JumpPower;
                 inJump = true;
+                anim.SetBool("IsJump", true);
+                AudioEventSystem.PlayAudio("Jump");
 
+            }
+            else
+            {
+                anim.SetBool("IsJump", false);
             }
         }
         else
@@ -114,6 +123,8 @@ public class PlayerController : MonoBehaviour
             m_char.height = ColHeight / 2f;
             InSlide = true;
             inJump = false;
+            anim.SetBool("IsSlide", true);
+            AudioEventSystem.PlayAudio("Slide");
         }
 
         if (InSlide)
@@ -125,6 +136,7 @@ public class PlayerController : MonoBehaviour
                 m_char.center = new Vector3(0, ColCenterY, 0);
                 m_char.height = ColHeight;
                 InSlide = false;
+                anim.SetBool("IsSlide", false);
             }
         }
     }
@@ -182,6 +194,30 @@ public class PlayerController : MonoBehaviour
         return hit;
 
     }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Obstacle"))
+        {
+            Die(); // Panggil fungsi mati
+            Debug.Log("Player Hit");
+        }
+    }
+    public void Die()
+    {
+        // Panggil fungsi mati
+        AudioEventSystem.PlayAudio("Die");
+        // Panggil fungsi mati
+        anim.SetBool("IsDead", true);
+        // Panggil fungsi mati
+        GameManager.instance.StopGame();
+    }
+
+    public void Life()
+    {
+        anim.SetBool("IsDead", false);
+    }
+
 
 
 }
