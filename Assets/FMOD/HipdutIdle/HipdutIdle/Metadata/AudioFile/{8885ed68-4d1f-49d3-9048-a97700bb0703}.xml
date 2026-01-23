@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{8885ed68-4d1f-49d3-9048-a97700bb0703}">
+		<property name="assetPath">
+			<value>Motorcycle 2.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.6647619047619047</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f00f265f-d825-4a7c-87b1-23a1c5ff54fe}</destination>
+		</relationship>
+	</object>
+</objects>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{98233cd4-52d7-459d-be11-18962e9fd155}">
+		<property name="name">
+			<value>MotorTier1</value>
+		</property>
+		<relationship name="folder">
+			<destination>{0c146ba7-36f9-4082-aee5-33b84cf39537}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{ddf1e980-4300-4246-a49a-fd4f6c491d60}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{ddf1e980-4300-4246-a49a-fd4f6c491d60}">
+		<property name="parameterType">
+			<value>1</value>
+		</property>
+		<property name="maximum">
+			<value>4</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
