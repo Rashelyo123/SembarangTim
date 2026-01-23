@@ -1,0 +1,456 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6906457406905335786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/BGM1_HipdutIdle
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/BGM1_HipdutIdle
+  Guid:
+    Data1: -1362835440
+    Data2: 1203155923
+    Data3: 1553616783
+    Data4: 1899189311
+  Banks:
+  - {fileID: 4300431853368150281}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -6070722167007839069}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 50526
+--- !u!114 &-6532567015174253068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI_Click5
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI_Click5
+  Guid:
+    Data1: -1746651506
+    Data2: 1079474953
+    Data3: -944330088
+    Data4: 1838550842
+  Banks:
+  - {fileID: -283955098421799082}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-6070722167007839069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BGM1_HipdutIdle/EQ
+  m_EditorClassIdentifier: 
+  Name: EQ
+  StudioPath: 
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 4028149668
+    data2: 635070350
+  Type: 0
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-5625590114052313140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/UI_Click4
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/UI_Click4
+  Guid:
+    Data1: -1500067154
+    Data2: 1298585803
+    Data3: 711835303
+    Data4: 302194294
+  Banks:
+  - {fileID: -283955098421799082}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5562872465058526985
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Motorcycle
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Motorcycle
+  Guid:
+    Data1: 1382623558
+    Data2: 1253312593
+    Data3: 487955081
+    Data4: 206426935
+  Banks:
+  - {fileID: -283955098421799082}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -1137398861335259936}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1800
+--- !u!114 &-1137398861335259936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Motorcycle/MotorTier1
+  m_EditorClassIdentifier: 
+  Name: MotorTier1
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 3252687658
+    data2: 2895983207
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-283955098421799082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: ../../1_Game Idle Hige BGM & SFX/ProjectJukirIdle/Kang-Parkir/FMOD/HipdutIdle/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX/SFX
+  lastModified: 639047928078083316
+  FileSizes:
+  - Name: Desktop
+    Value: 111040
+  - Name: Mobile
+    Value: 238112
+  Exists: 1
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d32cf7c32a3ed8347bac48ef5ed56d82, type: 3}
+  m_Name: FMODStudioCache
+  m_EditorClassIdentifier: 
+  EditorBanks:
+  - {fileID: 5792805640861500515}
+  - {fileID: 4300431853368150281}
+  - {fileID: 3305762656272765915}
+  - {fileID: -283955098421799082}
+  EditorEvents:
+  - {fileID: 8243432585059871073}
+  - {fileID: -6906457406905335786}
+  - {fileID: 602038230128108441}
+  - {fileID: 70924798304201525}
+  - {fileID: 2332397732982638441}
+  - {fileID: -5562872465058526985}
+  - {fileID: 1184707126056389411}
+  - {fileID: -6532567015174253068}
+  - {fileID: 7198216481628461133}
+  - {fileID: -5625590114052313140}
+  EditorParameters: []
+  MasterBanks:
+  - {fileID: 3305762656272765915}
+  StringsBanks:
+  - {fileID: 5792805640861500515}
+  cacheVersion: 131858
+  cacheTime: 639047928078083316
+  SerializableEventsDict:
+  - key: event:/BGM/BGM5_HipdutIdle
+    index: 0
+  - key: event:/BGM/BGM1_HipdutIdle
+    index: 1
+  - key: event:/BGM/BGM4_HipdutIdle
+    index: 2
+  - key: event:/BGM/BGM2_HipdutIdle
+    index: 3
+  - key: event:/BGM/BGM3_HipdutIdle
+    index: 4
+--- !u!114 &70924798304201525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/BGM2_HipdutIdle
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/BGM2_HipdutIdle
+  Guid:
+    Data1: -2128966506
+    Data2: 1106464877
+    Data3: -1075174772
+    Data4: 642675386
+  Banks:
+  - {fileID: 4300431853368150281}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 42687
+--- !u!114 &602038230128108441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/BGM4_HipdutIdle
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/BGM4_HipdutIdle
+  Guid:
+    Data1: -267372721
+    Data2: 1187004082
+    Data3: -1653550173
+    Data4: -1013589318
+  Banks:
+  - {fileID: 4300431853368150281}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 50169
+--- !u!114 &1184707126056389411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Car
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Car
+  Guid:
+    Data1: 1605286775
+    Data2: 1203484656
+    Data3: 563707791
+    Data4: -596790893
+  Banks:
+  - {fileID: -283955098421799082}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2332397732982638441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/BGM3_HipdutIdle
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/BGM3_HipdutIdle
+  Guid:
+    Data1: 1938066594
+    Data2: 1263410795
+    Data3: -204883581
+    Data4: 588655344
+  Banks:
+  - {fileID: 4300431853368150281}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 44303
+--- !u!114 &3305762656272765915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../../1_Game Idle Hige BGM & SFX/ProjectJukirIdle/Kang-Parkir/FMOD/HipdutIdle/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639047928061410378
+  FileSizes:
+  - Name: Desktop
+    Value: 1074
+  - Name: Mobile
+    Value: 1074
+  Exists: 1
+--- !u!114 &4300431853368150281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/BGM.bank
+  m_EditorClassIdentifier: 
+  Path: ../../1_Game Idle Hige BGM & SFX/ProjectJukirIdle/Kang-Parkir/FMOD/HipdutIdle/Build/Desktop/BGM.bank
+  Name: BGM
+  StudioPath: bank:/BGM/BGM
+  lastModified: 639047928076654227
+  FileSizes:
+  - Name: Desktop
+    Value: 2725824
+  - Name: Mobile
+    Value: 6546752
+  Exists: 1
+--- !u!114 &5792805640861500515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../../1_Game Idle Hige BGM & SFX/ProjectJukirIdle/Kang-Parkir/FMOD/HipdutIdle/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 639047928061420378
+  FileSizes:
+  - Name: Desktop
+    Value: 1382
+  - Name: Mobile
+    Value: 1382
+  Exists: 1
+--- !u!114 &7198216481628461133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Coin
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Coin
+  Guid:
+    Data1: 594286240
+    Data2: 1257339285
+    Data3: -1887040107
+    Data4: -1634545648
+  Banks:
+  - {fileID: -283955098421799082}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &8243432585059871073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/BGM/BGM5_HipdutIdle
+  m_EditorClassIdentifier: 
+  Path: event:/BGM/BGM5_HipdutIdle
+  Guid:
+    Data1: -74455033
+    Data2: 1239959309
+    Data3: -706455108
+    Data4: -1419831134
+  Banks:
+  - {fileID: 4300431853368150281}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 61323
