@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{6893ebc5-7f1f-4ec3-9980-24e5fc41dff8}">
+		<property name="assetPath">
+			<value>Idle Game Hige BGM1 90BPM.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>74.666666666666671</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{f00f265f-d825-4a7c-87b1-23a1c5ff54fe}</destination>
+		</relationship>
+	</object>
+</objects>

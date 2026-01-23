@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{47faebe1-4adf-4783-a6b5-c1ebbe8af5bc}">
+		<property name="name">
+			<value>EQ</value>
+		</property>
+		<relationship name="folder">
+			<destination>{0c146ba7-36f9-4082-aee5-33b84cf39537}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{96d48903-0bc9-4541-b287-be7689c85b95}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{96d48903-0bc9-4541-b287-be7689c85b95}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
