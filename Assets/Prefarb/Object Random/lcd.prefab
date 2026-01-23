@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -26127899403603722}
   - component: {fileID: -2805902014519360110}
   - component: {fileID: 4737964588624832549}
+  - component: {fileID: -2164947990665204675}
   m_Layer: 0
   m_Name: lcd
   m_TagString: Obstacle
@@ -120,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: 8a53933b2cb95304d908ec641d88fb8e, type: 2}
+  destroyEffectPrefab: {fileID: 358637981425055526, guid: 8eb503696b886e04faff8fc0f480d473, type: 3}
 --- !u!65 &4737964588624832549
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -141,3 +143,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.5765104, y: 0.9498029, z: 0.27261817}
   m_Center: {x: 1.0977876, y: 1.1496146, z: 0.8897895}
+--- !u!54 &-2164947990665204675
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697719300050303040}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0

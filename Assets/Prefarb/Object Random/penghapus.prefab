@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: -1347367523733573215}
   - component: {fileID: 6777358388295212092}
   - component: {fileID: 2306939960326154964}
+  - component: {fileID: 6107942904782608216}
   m_Layer: 0
   m_Name: penghapus
   m_TagString: Obstacle
@@ -119,6 +120,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: df4e932b7df21854ea6dd7c3a7c2bef6, type: 2}
+  destroyEffectPrefab: {fileID: 358637981425055526, guid: 8eb503696b886e04faff8fc0f480d473, type: 3}
 --- !u!65 &2306939960326154964
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -140,3 +142,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.53393793, y: 0.35830858, z: 0.23371613}
   m_Center: {x: -3.109399, y: -0.5323081, z: -1.9924381}
+--- !u!54 &6107942904782608216
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3715475963355496570}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0

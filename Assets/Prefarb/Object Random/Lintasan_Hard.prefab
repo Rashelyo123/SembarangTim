@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8946700133271387973, guid: 0223c584552e2804c968bd5f584bfbc9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.47
+      value: 1.33
       objectReference: {fileID: 0}
     - target: {fileID: 8946700133271387973, guid: 0223c584552e2804c968bd5f584bfbc9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -78,6 +78,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 260817606597072199, guid: 93074a95c051641428677704fcf20a0d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.33
+      objectReference: {fileID: 0}
     - target: {fileID: 4654667921036597316, guid: 93074a95c051641428677704fcf20a0d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -121,6 +125,14 @@ PrefabInstance:
     - target: {fileID: 5463820159682249470, guid: 93074a95c051641428677704fcf20a0d, type: 3}
       propertyPath: m_Name
       value: Lintasan_Hard
+      objectReference: {fileID: 0}
+    - target: {fileID: 5738081800386168954, guid: 93074a95c051641428677704fcf20a0d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 5992147135929158833, guid: 93074a95c051641428677704fcf20a0d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.33
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -240,7 +252,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8946700133271387973, guid: 0223c584552e2804c968bd5f584bfbc9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.47
+      value: 1.33
       objectReference: {fileID: 0}
     - target: {fileID: 8946700133271387973, guid: 0223c584552e2804c968bd5f584bfbc9, type: 3}
       propertyPath: m_LocalPosition.z

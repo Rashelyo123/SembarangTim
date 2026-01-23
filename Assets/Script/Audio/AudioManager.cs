@@ -14,6 +14,7 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] private AudioSource Coin_audioSource;
     [SerializeField] private AudioSource Nembak_audioSource;
+    [SerializeField] private AudioSource Destory_audioSource;
 
     [System.Serializable]
     public class AudioClipItem
@@ -33,6 +34,7 @@ public class AudioManager : MonoBehaviour
 
 
         Nembak,
+        Destroy,
     }
 
     [SerializeField] private AudioClipItem[] audioClipItems;
@@ -125,6 +127,8 @@ public class AudioManager : MonoBehaviour
 
             case AudioCategory.Nembak:
                 return Nembak_audioSource;
+            case AudioCategory.Destroy:
+                return Destory_audioSource;
             default:
                 return null;
         }

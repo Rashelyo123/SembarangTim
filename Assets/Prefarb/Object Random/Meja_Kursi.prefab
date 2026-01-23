@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2809642493999268136}
   - component: {fileID: -9015868571455556587}
   - component: {fileID: 830359609287781146}
+  - component: {fileID: 4358566461031361155}
   m_Layer: 0
   m_Name: Meja_Kursi
   m_TagString: Obstacle
@@ -117,6 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemData: {fileID: 11400000, guid: 992face52c614e64fb7c9da94b7e55d0, type: 2}
+  destroyEffectPrefab: {fileID: 358637981425055526, guid: 8eb503696b886e04faff8fc0f480d473, type: 3}
 --- !u!65 &830359609287781146
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -138,3 +140,30 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.5852427, y: 1.4638298, z: 1.0887423}
   m_Center: {x: -0.65783966, y: -1.2520621, z: 0.23103836}
+--- !u!54 &4358566461031361155
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3239691800089128449}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
