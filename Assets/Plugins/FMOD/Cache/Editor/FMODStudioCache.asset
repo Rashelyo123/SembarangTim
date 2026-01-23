@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8563227589848239227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/BGM.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/HipdutIdle/Build/Desktop/BGM.bank
+  Name: BGM
+  StudioPath: bank:/BGM/BGM
+  lastModified: 639047938214174490
+  FileSizes:
+  - Name: Desktop
+    Value: 2725824
+  - Name: Mobile
+    Value: 6546752
+  Exists: 1
+--- !u!114 &-8065516187458690265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/HipdutIdle/Build/Desktop/Master.bank
+  Name: Master
+  StudioPath: bank:/Master
+  lastModified: 639047938214194567
+  FileSizes:
+  - Name: Desktop
+    Value: 1074
+  - Name: Mobile
+    Value: 1074
+  Exists: 1
 --- !u!114 &-6906457406905335786
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19,7 +63,7 @@ MonoBehaviour:
     Data3: 1553616783
     Data4: 1899189311
   Banks:
-  - {fileID: 4300431853368150281}
+  - {fileID: -8563227589848239227}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -47,7 +91,7 @@ MonoBehaviour:
     Data3: -944330088
     Data4: 1838550842
   Banks:
-  - {fileID: -283955098421799082}
+  - {fileID: 9121403739126827999}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -98,7 +142,7 @@ MonoBehaviour:
     Data3: 711835303
     Data4: 302194294
   Banks:
-  - {fileID: -283955098421799082}
+  - {fileID: 9121403739126827999}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -125,7 +169,7 @@ MonoBehaviour:
     Data3: 487955081
     Data4: 206426935
   Banks:
-  - {fileID: -283955098421799082}
+  - {fileID: 9121403739126827999}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -158,28 +202,6 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
---- !u!114 &-283955098421799082
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/SFX.bank
-  m_EditorClassIdentifier: 
-  Path: ../../1_Game Idle Hige BGM & SFX/ProjectJukirIdle/Kang-Parkir/FMOD/HipdutIdle/Build/Desktop/SFX.bank
-  Name: SFX
-  StudioPath: bank:/SFX/SFX
-  lastModified: 639047928078083316
-  FileSizes:
-  - Name: Desktop
-    Value: 111040
-  - Name: Mobile
-    Value: 238112
-  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -193,10 +215,10 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 5792805640861500515}
-  - {fileID: 4300431853368150281}
-  - {fileID: 3305762656272765915}
-  - {fileID: -283955098421799082}
+  - {fileID: 8175495601508230908}
+  - {fileID: -8563227589848239227}
+  - {fileID: -8065516187458690265}
+  - {fileID: 9121403739126827999}
   EditorEvents:
   - {fileID: 8243432585059871073}
   - {fileID: -6906457406905335786}
@@ -210,11 +232,11 @@ MonoBehaviour:
   - {fileID: -5625590114052313140}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 3305762656272765915}
+  - {fileID: -8065516187458690265}
   StringsBanks:
-  - {fileID: 5792805640861500515}
+  - {fileID: 8175495601508230908}
   cacheVersion: 131858
-  cacheTime: 639047928078083316
+  cacheTime: 639047938214204555
   SerializableEventsDict:
   - key: event:/BGM/BGM5_HipdutIdle
     index: 0
@@ -245,7 +267,7 @@ MonoBehaviour:
     Data3: -1075174772
     Data4: 642675386
   Banks:
-  - {fileID: 4300431853368150281}
+  - {fileID: -8563227589848239227}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -272,7 +294,7 @@ MonoBehaviour:
     Data3: -1653550173
     Data4: -1013589318
   Banks:
-  - {fileID: 4300431853368150281}
+  - {fileID: -8563227589848239227}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -299,7 +321,7 @@ MonoBehaviour:
     Data3: 563707791
     Data4: -596790893
   Banks:
-  - {fileID: -283955098421799082}
+  - {fileID: 9121403739126827999}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -326,7 +348,7 @@ MonoBehaviour:
     Data3: -204883581
     Data4: 588655344
   Banks:
-  - {fileID: 4300431853368150281}
+  - {fileID: -8563227589848239227}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -334,72 +356,6 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 44303
---- !u!114 &3305762656272765915
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.bank
-  m_EditorClassIdentifier: 
-  Path: ../../1_Game Idle Hige BGM & SFX/ProjectJukirIdle/Kang-Parkir/FMOD/HipdutIdle/Build/Desktop/Master.bank
-  Name: Master
-  StudioPath: bank:/Master
-  lastModified: 639047928061410378
-  FileSizes:
-  - Name: Desktop
-    Value: 1074
-  - Name: Mobile
-    Value: 1074
-  Exists: 1
---- !u!114 &4300431853368150281
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/BGM.bank
-  m_EditorClassIdentifier: 
-  Path: ../../1_Game Idle Hige BGM & SFX/ProjectJukirIdle/Kang-Parkir/FMOD/HipdutIdle/Build/Desktop/BGM.bank
-  Name: BGM
-  StudioPath: bank:/BGM/BGM
-  lastModified: 639047928076654227
-  FileSizes:
-  - Name: Desktop
-    Value: 2725824
-  - Name: Mobile
-    Value: 6546752
-  Exists: 1
---- !u!114 &5792805640861500515
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
-  m_Name: bank:/Master.strings.bank
-  m_EditorClassIdentifier: 
-  Path: ../../1_Game Idle Hige BGM & SFX/ProjectJukirIdle/Kang-Parkir/FMOD/HipdutIdle/Build/Desktop/Master.strings.bank
-  Name: Master.strings
-  StudioPath: bank:/Master.strings
-  lastModified: 639047928061420378
-  FileSizes:
-  - Name: Desktop
-    Value: 1382
-  - Name: Mobile
-    Value: 1382
-  Exists: 1
 --- !u!114 &7198216481628461133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,7 +375,7 @@ MonoBehaviour:
     Data3: -1887040107
     Data4: -1634545648
   Banks:
-  - {fileID: -283955098421799082}
+  - {fileID: 9121403739126827999}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -427,6 +383,28 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8175495601508230908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/HipdutIdle/Build/Desktop/Master.strings.bank
+  Name: Master.strings
+  StudioPath: bank:/Master.strings
+  lastModified: 639047938214194567
+  FileSizes:
+  - Name: Desktop
+    Value: 1382
+  - Name: Mobile
+    Value: 1382
+  Exists: 1
 --- !u!114 &8243432585059871073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,7 +424,7 @@ MonoBehaviour:
     Data3: -706455108
     Data4: -1419831134
   Banks:
-  - {fileID: 4300431853368150281}
+  - {fileID: -8563227589848239227}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -454,3 +432,25 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 61323
+--- !u!114 &9121403739126827999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/SFX.bank
+  m_EditorClassIdentifier: 
+  Path: Assets/FMOD/HipdutIdle/Build/Desktop/SFX.bank
+  Name: SFX
+  StudioPath: bank:/SFX/SFX
+  lastModified: 639047938214204555
+  FileSizes:
+  - Name: Desktop
+    Value: 111040
+  - Name: Mobile
+    Value: 238112
+  Exists: 1
